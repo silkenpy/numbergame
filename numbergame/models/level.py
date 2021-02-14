@@ -9,12 +9,12 @@ from numbergame.settings import engine
 Base = declarative_base()
 
 
-class User(Base):
-    __tablename__ = 'users'
+class Level(Base):
+    __tablename__ = 'level'
     id = Column(Integer, primary_key=True)
-    uuid = Column(String(36), nullable=False)
-    completed = Column(JSON, nullable=False, default=[])
-    first_time = Column(DateTime, nullable=False, server_default=func.now())
+    numbers = Column(JSON, nullable=False)
+    goal = Column(Integer, nullable=False)
+    solution = Column(JSON, nullable=False)
 
     def __repr__(self, all_fields=False):
         return alchemy_dict(self, all_fields)
@@ -23,7 +23,7 @@ class User(Base):
         return json.dumps(self.__repr__(all_fields), cls=AlchemyEncoder)
 
     def __fields__(self):
-        return ["id", "uuid", "first_time"]
+        return ["id", "numbers", "goal", "solution"]
 
 
 def setup_table():
