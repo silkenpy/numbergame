@@ -1,14 +1,16 @@
 """Settings."""
 from sqlalchemy import create_engine
 
+VERSION = "0.1.0"
+
 MysqlConf = {
     "engine": "mysql+mysqlconnector",
     "pool_size": 20,
     "pool_recycle": 30,
     "debug": False,
-    "username": "",
-    "password": "",
-    "host": "",
+    "username": "arash",
+    "password": "shibuya",
+    "host": "localhost",
     "port": 3306,
     "db_name": "ng",
 }

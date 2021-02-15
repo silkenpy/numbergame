@@ -5,7 +5,6 @@ from typing import List
 
 import falcon
 from falcon import Request, Response
-from falcon.bench.queues.stats import Resource
 
 from numbergame.models.level import Level
 from numbergame.models.users import User
@@ -48,28 +47,29 @@ class UserLevels:
                     break
         return False
 
-    def on_post(self, req: Request, resp: Response, resource: Resource) -> None:
+    def on_post(self, req: Request, resp: Response) -> None:
         """POST /v1/user/level request to check a solution for specific level id."""
-        session = resource.session
         try:
 
             data = json.loads(req.bounded_stream.read())
-            user = session.query(User).filter(User.uuid == data["uuid"]).first()
+            user = self.session.query(User).filter(User.uuid == data["uuid"]).first()
             if user:
-                level = session.query(Level).filter(Level.id == data["level"]).first()
+                level = (
+                    self.session.query(Level).filter(Level.id == data["level"]).first()
+                )
                 if level:
                     done = self.check(level.numbers, level.goal, data["solution"])
                     if done:
                         user.completed = list(user.completed)
                         if level.id not in user.completed:
                             user.completed.append(level.id)
-                            session.add(user)
-                            session.commit()
+                            self.session.add(user)
+                            self.session.commit()
 
                         resp.status = falcon.HTTP_200
                         return
             resp.status = falcon.HTTP_404
 
         except Exception:
-            session.rollback()
-            session.close()
+            self.session.rollback()
+            self.session.close()
