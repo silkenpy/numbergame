@@ -8,9 +8,9 @@ MysqlConf = {
     "pool_size": 20,
     "pool_recycle": 30,
     "debug": False,
-    "username": "arash",
-    "password": "shibuya",
-    "host": "localhost",
+    "username": "",
+    "password": "",
+    "host": "",
     "port": 3306,
     "db_name": "ng",
 }
