@@ -20,15 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bfbd60-f5a4-4dcb-bfa6-8a9fac582871" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/numbergame/api/v1/adad.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/numbergame/generator/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/numbergame/generator/level_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/numbergame/models/level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/numbergame/models/user_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/numbergame/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/numbergame/utils/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numbergame/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/numbergame/models/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numbergame/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/numbergame/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.pre-commit-config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.python-version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/noxfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/numbergame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/numbergame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numbergame/utils/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/numbergame/utils/tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,27 +60,6 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.level_generator">
-    <configuration name="adad" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="numbergame" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/numbergame/api/v1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/numbergame/api/v1/adad.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="level" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="numbergame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -140,6 +123,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="user_level" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="numbergame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/numbergame/api/v1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/numbergame/api/v1/user_level.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="users" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="numbergame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -164,10 +168,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.level_generator" />
+        <item itemvalue="Python.users" />
+        <item itemvalue="Python.user_level" />
         <item itemvalue="Python.level" />
         <item itemvalue="Python.settings" />
-        <item itemvalue="Python.adad" />
-        <item itemvalue="Python.users" />
       </list>
     </recent_temporary>
   </component>
@@ -195,22 +199,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1271" height="249" key="GridCell.Tab.0.bottom" timestamp="1613306635350">
+    <state x="72" y="27" width="742" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613332733035">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="249" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1613306635350" />
-    <state width="1271" height="249" key="GridCell.Tab.0.center" timestamp="1613306635349">
+    <state x="72" y="27" width="742" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1294.741@72.27.1294.741" timestamp="1613332733035" />
+    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613331840827">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="249" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1613306635349" />
-    <state width="1271" height="249" key="GridCell.Tab.0.left" timestamp="1613306635349">
+    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1613331840827" />
+    <state width="1271" height="121" key="GridCell.Tab.0.bottom" timestamp="1613336720511">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="249" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1613306635349" />
-    <state width="1271" height="249" key="GridCell.Tab.0.right" timestamp="1613306635349">
+    <state width="1271" height="121" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1613336720511" />
+    <state width="1271" height="121" key="GridCell.Tab.0.center" timestamp="1613336720510">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="249" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1613306635349" />
+    <state width="1271" height="121" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1613336720510" />
+    <state width="1271" height="121" key="GridCell.Tab.0.left" timestamp="1613336720508">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="121" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1613336720508" />
+    <state width="1271" height="121" key="GridCell.Tab.0.right" timestamp="1613336720511">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="121" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1613336720511" />
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1613221063101">
       <screen x="72" y="27" width="1294" height="741" />
     </state>

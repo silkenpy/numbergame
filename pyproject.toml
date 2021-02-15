@@ -2,7 +2,7 @@
 name = "numbergame"
 version = "0.1.0"
 description = ""
-authors = ["a <silkenpy@gmail.com>"]
+authors = ["a.a <silkenpy@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8.6"
@@ -12,6 +12,10 @@ mysql-connector-python = "^8.0.23"
 
 [tool.poetry.dev-dependencies]
 gunicorn = "^20.0.4"
+nox = "^2020.12.31"
+pre-commit = "^2.10.1"
+mypy = "^0.800"
+pylint = "^2.6.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
