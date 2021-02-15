@@ -1,3 +1,4 @@
+"""app.py"""
 import falcon
 
 from numbergame.api.v1.level_solution import LevelSolution
@@ -10,8 +11,8 @@ from numbergame.settings import engine
 
 app = falcon.API(middleware=[SQLAlchemySessionManager(engine)])
 
-app.add_route('/', Hello())
-app.add_route('/v1/user', UserProfile())
-app.add_route('/v1/user/level', UserLevels())
-app.add_route('/v1/level', GameLevels())
-app.add_route('/v1/solution', LevelSolution())
+app.add_route("/", Hello())
+app.add_route("/v1/user", UserProfile())
+app.add_route("/v1/user/level", UserLevels())
+app.add_route("/v1/level", GameLevels())
+app.add_route("/v1/solution", LevelSolution())

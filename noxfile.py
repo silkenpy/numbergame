@@ -126,7 +126,9 @@ def typeguard(session: Session) -> None:
     session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(session, "pytest", "pytest-mock", "typeguard")
     session.run(
-        "pytest", f"--typeguard-packages={PACKAGE_NAME} ", *args,
+        "pytest",
+        f"--typeguard-packages={PACKAGE_NAME} ",
+        *args,
     )
 
 

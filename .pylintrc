@@ -1,0 +1,2 @@
+[pylint]
+disable=too-few-public-methods,bad-continuation,subprocess-run-check,duplicate-code,missing-module-docstring,too-many-arguments,too-many-instance-attributes,consider-using-enumerate,broad-except,no-member,eval-used,no-self-use,unused-argument,arguments-differ,fixme

@@ -1,7 +1,8 @@
+"""Simple level generator"""
 from copy import deepcopy
 from random import randint
 from secrets import choice
-from time import time
+from typing import Tuple, List
 
 from sqlalchemy.orm import Session
 
@@ -10,11 +11,14 @@ from numbergame.settings import engine
 
 
 class LevelGenerator:
-    def __init__(self):
+    """A simple class to generates some levels."""
+
+    def __init__(self) -> None:
         self.session = Session(engine)
 
     @staticmethod
-    def generator(max_num: int):
+    def _generator(max_num: int) -> Tuple[List[int], int, List[str]]:
+        """Generate a level based on max_num."""
         number_list = [randint(8, max_num) for _ in range(4)]
         number_list.append(randint(1, 9))
         number_list.append(randint(1, 9))
@@ -23,7 +27,7 @@ class LevelGenerator:
         result_list = []
         solution_list = []
         func_list = ["+", "-", "/", "*", "*", "*"]
-        for num_steps in range(3):
+        for _ in range(3):
             item1 = choice(tmp_list)
             tmp_list.remove(item1)
             item2 = choice(tmp_list)
@@ -62,13 +66,17 @@ class LevelGenerator:
                 res = eval(equation)
                 solution_list.append(f"{equation}={res}")
 
-        solution_list = [x.replace("--", "+").replace("+-", "-").replace(".0", "") for x in solution_list]
+        solution_list = [
+            x.replace("--", "+").replace("+-", "-").replace(".0", "")
+            for x in solution_list
+        ]
         return number_list, int(res), solution_list
 
-    def start(self, num_levels: int = 100):
-        n: int = 0
-        while n < num_levels:
-            list_numbers, goal, solution = self.generator(10)
+    def start(self, num_levels: int = 100) -> None:
+        """Start to generate levels."""
+        generated_level_count: int = 0
+        while generated_level_count < num_levels:
+            list_numbers, goal, solution = self._generator(10)
             if 100 < goal < 500:
                 new_level = Level()
                 new_level.numbers = list_numbers
@@ -76,7 +84,7 @@ class LevelGenerator:
                 new_level.solution = solution
                 self.session.add(new_level)
                 self.session.commit()
-                n += 1
+                generated_level_count += 1
 
 
 lg = LevelGenerator()
