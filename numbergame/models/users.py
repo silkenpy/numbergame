@@ -28,7 +28,7 @@ class User(Base):
         return json.dumps(self._dict(all_fields), cls=AlchemyEncoder)
 
     def __fields__(self) -> List:
-        return ["id", "uuid", "first_time"]
+        return ["id", "uuid", "completed", "first_time"]
 
 
 def setup_table() -> None:
